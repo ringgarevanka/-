@@ -2,8 +2,24 @@
   <title>Redirect...</title>
   <meta property="og:title" content="@ringgarevanka"/>
   <meta property="og:description" content="(Ini Watermark | This is Watermark)"/>
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1182294906421645464/1198270497817903244/raiden_ei.jpg"/>
-  <meta http-equiv="refresh" content="0; url=https://ringgarevanka.github.io/">
+  <!--<meta property="og:image" content="https://cdn.discordapp.com/attachments/1182294906421645464/1198270497817903244/raiden_ei.jpg"/>
+  <meta http-equiv="refresh" content="0; url=https://ringgarevanka.github.io/">-->
+  <script>
+window.onload = function() {
+  const links = document.querySelectorAll('a'); // Select all anchor tags
+
+  for (const link of links) {
+    const redirectUrl = link.href.searchParams.get("redirect"); // Get redirect URL from search params
+
+    if (redirectUrl) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        window.location.href = redirectUrl;
+      });
+    }
+  }
+};
+  </script>
 </head>
 <body>
 
